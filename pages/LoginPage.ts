@@ -42,7 +42,11 @@ export class LoginPage {
     }
 
     async navigate(url: string) {
-        await this.page.goto(url);
+        await this.page.goto(url,
+            {
+    waitUntil: "networkidle"
+  }
+        );
     }
 
     async loginToCognito(username: string, password: string) {

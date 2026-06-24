@@ -26,7 +26,8 @@ export default defineConfig({
   use:
   {
     browserName:'chromium',
-    headless:true,
+    headless:true, // for pipline
+      //headless:false, // for local
     screenshot: 'on',
     video: 'retain-on-failure',
     trace: 'retain-on-failure'
