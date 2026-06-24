@@ -19,11 +19,17 @@ export default defineConfig({
     timeout:60*1000,
     
   },
-  reporter:'html',
+  reporter: [
+    ['html'],
+    ['allure-playwright']
+  ],
   use:
   {
     browserName:'chromium',
-    headless:false
+    headless:false,
+    screenshot: 'on',
+    video: 'retain-on-failure',
+    trace: 'retain-on-failure'
   },
 
  

@@ -41,8 +41,8 @@ export class LoginPage {
             .first();
     }
 
-    async navigate() {
-        await this.page.goto('https://staging.farmstore-modern.us/');
+    async navigate(url: string) {
+        await this.page.goto(url);
     }
 
     async loginToCognito(username: string, password: string) {
