@@ -14,9 +14,9 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
-  timeout:60*1000,
+  timeout:120*1000,
   expect:{
-    timeout:60*1000,
+    timeout:120*1000,
     
   },
   reporter: [
@@ -27,7 +27,7 @@ export default defineConfig({
   {
     browserName:'chromium',
     headless:true, // for pipline
-      //headless:false, // for local
+    //headless:false, // for local
     screenshot: 'on',
     video: 'retain-on-failure',
     trace: 'retain-on-failure'

@@ -3,7 +3,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { ExcelReader } from '../utils/ExcelReader';
 import {ReportUtil} from '../utils/ReportUtil';
 
-test.only('Login Test', async ({ page },testInfo) => {
+test('Login Test', async ({ page },testInfo) => {
 
     const loginPage = new LoginPage(page);
 
